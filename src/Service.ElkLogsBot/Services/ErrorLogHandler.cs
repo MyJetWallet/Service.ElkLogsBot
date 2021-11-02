@@ -100,7 +100,6 @@ namespace Service.ElkLogsBot.Services
 
         public void Start()
         {
-            _lastTs = _lastTs.AddDays(-1);
             
             var uris = Program.Settings.ElkLogs.Urls.Values.Select(e => new Uri(e)).ToArray();
             
