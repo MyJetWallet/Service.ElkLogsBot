@@ -48,7 +48,9 @@ namespace Service.ElkLogsBot.Services
             
             if (!items.Any())
                 return;
-
+            
+            _lastTs = items.Max(e => e.Timestamp);
+            
             foreach (var app in items.GroupBy(e => e.Fields.AppName))
             {
                 var sb = new StringBuilder();
@@ -71,7 +73,7 @@ namespace Service.ElkLogsBot.Services
             }
 
 
-            _lastTs = items.Max(e => e.Timestamp);
+            
         }
 
         public class Item
