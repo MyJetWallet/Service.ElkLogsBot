@@ -134,8 +134,12 @@ namespace Service.ElkLogsBot.Services
 
         private async Task Send(string message)
         {
-            await _botApiClient.SendTextMessageAsync(Program.Settings.TelegramChatId, message);
             Console.WriteLine(message);
+
+            if (message.Length > 2000)
+                message = message.Substring(0, 2000);
+            
+            await _botApiClient.SendTextMessageAsync(Program.Settings.TelegramChatId, message);
         }
         
     }
