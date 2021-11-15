@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <UserSecretsId>135fa357-9655-401c-942c-dd7edd9e8445</UserSecretsId>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
@@ -12,9 +12,9 @@
     <PackageReference Include="JetBrains.Annotations" Version="2021.3.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
-    <PackageReference Include="MyJetWallet.Sdk.GrpcMetrics" Version="2.0.3" />
+    <PackageReference Include="MyJetWallet.Sdk.GrpcMetrics" Version="2.0.4" />
     <PackageReference Include="MyJetWallet.Sdk.GrpcSchema" Version="1.0.6" />
-    <PackageReference Include="MyJetWallet.Sdk.Service" Version="1.6.11" />
+    <PackageReference Include="MyJetWallet.Sdk.Service" Version="2.0.2" />
     <PackageReference Include="NEST" Version="7.15.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="prometheus-net.AspNetCore" Version="5.0.1" />
@@ -26,8 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Service.ElkLogsBot.Domain\Service.ElkLogsBot.Domain.csproj" />
-    <ProjectReference Include="..\Service.ElkLogsBot.Grpc\Service.ElkLogsBot.Grpc.csproj" />
   </ItemGroup>
 
   <ItemGroup>

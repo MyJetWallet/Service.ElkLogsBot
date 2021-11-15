@@ -56,15 +56,19 @@ namespace Service.ElkLogsBot.Services
                 var sb = new StringBuilder();
                 sb.AppendLine("====================");
                 sb.AppendLine($"| {app.Key} | count records: {app.Count()}");
-                var index = 5;
+                var index = 0;
                 foreach (var item in app.OrderByDescending(e => e.Timestamp))
                 {
                     sb.AppendLine($"{item.Level}; {item.Timestamp:yyyy-MM-dd HH:mm:ss}; {item.Fields.Host}");
                     sb.AppendLine(item.message);
                     sb.AppendLine();
+                    
+                    index++;
+                    if (index >=5)
+                        break;
                 }
 
-                if (app.Count() > 5)
+                if (app.Count() > index)
                     sb.AppendLine("...");
 
                 sb.AppendLine();
