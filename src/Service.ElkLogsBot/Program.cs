@@ -45,7 +45,7 @@ namespace Service.ElkLogsBot
                 Urls = new Dictionary<string, string>()
             };
             
-            using var loggerFactory = LogConfigurator.ConfigureElk("MyJetWallet", Settings.SeqServiceUrl, logSettings);
+            using var loggerFactory = LogConfigurator.ConfigureElk_v2("MyJetWallet", Settings.SeqServiceUrl, logSettings);
 
             var logger = loggerFactory.CreateLogger<Program>();
 
